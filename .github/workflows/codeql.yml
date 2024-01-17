@@ -55,6 +55,9 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         config-file: ./.github/codeql/codeql-config.yml
+        debug: true
+        debug-artifact-name: codeql_debug_artifact
+        debug-database-name: codeql_debug_db
     
     
     # Initializes the CodeQL tools for scanning.
