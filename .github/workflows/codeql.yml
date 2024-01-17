@@ -60,8 +60,7 @@ jobs:
             - uses: security-and-quality
           query-filters:
             - exclude:
-              problem.severity: 
-                - recommendation
+              tags: /cwe-643/
         debug: true
         debug-artifact-name: codeql_debug_artifact
         debug-database-name: codeql_debug_db
