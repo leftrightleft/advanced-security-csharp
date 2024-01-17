@@ -54,17 +54,17 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
-        config-file: ./.github/codeql/codeql-config.yml  
-        # config: |
-        #   disable-default-queries: true
-        #   queries:
-        #     - uses: security-and-quality
-        #   query-filters:
-        #     - exclude:
-        #       tags: /cwe-643/
-        # # debug: true
-        # # debug-artifact-name: codeql_debug_artifact
-        # # debug-database-name: codeql_debug_db
+        config: |
+          disable-default-queries: true
+          queries:
+            - uses: security-and-quality
+          query-filters:
+            - exclude:
+              problem.severity:
+              - recommendation
+        debug: true
+        debug-artifact-name: codeql_debug_artifact
+        debug-database-name: codeql_debug_db
     
     
     # Initializes the CodeQL tools for scanning.
