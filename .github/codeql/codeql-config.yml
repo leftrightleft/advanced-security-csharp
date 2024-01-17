@@ -5,5 +5,4 @@ queries:
 
 query-filters:
   - exclude:
-    problem.severity:
-      - recommendation
+    tags: /cwe-643/
