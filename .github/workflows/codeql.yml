@@ -55,6 +55,7 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         config: |
+          disable-default-queries: true
           queries:
             - uses: security-and-quality
           query-filters:
