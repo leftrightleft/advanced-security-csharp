@@ -49,13 +49,14 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
-        config: |
-          queries:
-            - uses: security-and-quality
-          query-filters:
-            - exclude:
-                problem.severity:
-                  - recommendation
+        queries: security-and-quality
+        # config: |
+        #   queries:
+        #     - uses: security-and-quality
+        #   query-filters:
+        #     - exclude:
+        #         problem.severity:
+        #           - recommendation
     
     
     # Initializes the CodeQL tools for scanning.
