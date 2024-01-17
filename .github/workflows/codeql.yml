@@ -56,7 +56,7 @@ jobs:
         languages: ${{ matrix.language }}
         config: |
           queries:
-            - uses: security-extended
+            - uses: security-and-quality
           query-filters:
             - exclude:
               problem.severity: recommendation
