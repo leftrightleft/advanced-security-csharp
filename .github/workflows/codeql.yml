@@ -18,7 +18,9 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '34 13 * * 3'
-
+env:
+  CODEQL_EXTRACTOR_CSHARP_OPTION_BUILDLESS: true
+  
 jobs:
   analyze:
     name: Analyze
